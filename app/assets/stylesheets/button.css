@@ -11,3 +11,7 @@
 .button-main {
   background-color: #9d0208;
 }
+
+.semivisible {
+  opacity: 0.5;
+}

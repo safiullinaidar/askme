@@ -5,6 +5,9 @@
   <p>user_id: <b><%= @question.user_id %></b></p>
 
   <div class="mt">
+    <% unless @question.hidden %>
+      <%= button_to fa_icon('eye-slash'), hide_question_path(@question), method: :patch, title: 'Скрыть вопрос' %>
+    <% end %>
     <%= link_to fa_icon('pencil'), edit_question_path(@question), title: 'Изменить вопрос' %>
     <%= button_to fa_icon('trash-o'), question_path(@question), method: :delete, title: 'Удалить вопрос' %>
   </div>
