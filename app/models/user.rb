@@ -3,13 +3,15 @@ class User < ApplicationRecord
 
   validates :email, 
     presence: true, 
-    uniqueness: { case_sensitive: false },
+    uniqueness: true,
     email: { mode: :strict, require_fqdn: true }
   
   validates :nickname, 
     uniqueness: true, 
     length: { maximum: 40 }, 
-    format: { with: /\w+\z/ }
+    format: { with: /\A[a-z]+\z/ }
+
+  validates :header_color, format: { with: /\A#[a-f0-9]{6}\z/i }
 
   def downcase_nickname
     nickname.downcase!
