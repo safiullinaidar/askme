@@ -24,7 +24,7 @@
     </div> 
   <% end %>
 
-  <% if question.author == current_user %>
+  <% unless question.author == question.user %>
     <%= link_to "@#{question.user.nickname}", user_path(question.user), class: 'mr-sm' %>
   <% end %>
 </div>
