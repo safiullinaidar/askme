@@ -12,6 +12,14 @@ a, button {
   font-size: 175%;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-light-grey {
+  color: #c0c0c0;
+}
+
 .title-md, .title {
   font-size: 150%;
 }
