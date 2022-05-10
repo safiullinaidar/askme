@@ -7,6 +7,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', require: false
 gem 'email_validator'
 gem 'font-awesome-rails'
+gem 'gravtastic'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'puma', '~> 5.0'
