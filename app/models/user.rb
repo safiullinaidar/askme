@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :questions, dependent: :delete_all
+  has_many :authored_questions, class_name: 'Question', foreign_key: 'author_id', dependent: :nullify
   has_secure_password
 
   validates :email, 

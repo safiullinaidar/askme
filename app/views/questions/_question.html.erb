@@ -21,6 +21,10 @@
       <%= button_to fa_icon('trash-o'), question_path(question), 
         method: :delete, title: 'Удалить вопрос', 
         form: { data: { turbo_confirm: 'Точно удалить вопрос?' } } %>
-    </div>
+    </div> 
+  <% end %>
+
+  <% if question.author == current_user %>
+    <%= link_to "@#{question.user.nickname}", user_path(question.user), class: 'mr-sm' %>
   <% end %>
 </div>
