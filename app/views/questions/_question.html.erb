@@ -24,9 +24,10 @@
     </div> 
   <% end %>
 
-  <% if question.author.present? %>
-    <% if question.author != question.user %>
-      <p class="text-grey">вопрос от <%= link_to display_nickname(question.author), user_path(question.author), class: 'mr-sm' %></p>
+  <% author = question.author %>
+  <% if author %>
+    <% unless author == question.user %>
+      <p class="text-grey">вопрос от <%= link_to display_nickname(author), user_path(author), class: 'mr-sm' %></p>
     <% end %>
   <% else %>
     <p class="text-grey">вопрос анонимный</p>
