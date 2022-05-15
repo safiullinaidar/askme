@@ -16,6 +16,7 @@ class User < ApplicationRecord
     email: { mode: :strict, require_fqdn: true }
   
   validates :nickname, 
+    presence: true,
     uniqueness: true, 
     length: { maximum: 40 }, 
     format: { with: /\A[a-z\d_]+\z/ }
