@@ -16,10 +16,10 @@ class User < ApplicationRecord
     email: { mode: :strict, require_fqdn: true }
   
   validates :nickname, 
-    presence: true,
     uniqueness: true, 
     length: { maximum: 40 }, 
-    format: { with: /\A[a-z\d_]+\z/ }
+    format: { with: /\A[a-z\d_]+\z/ },
+    allow_blank: true
 
   validates :header_color, format: { with: /\A#[a-f0-9]{6}\z/i }
 end
