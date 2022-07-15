@@ -1,24 +1,26 @@
-# README
+# Приложение Askme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Функционал веб-приложения аналогичен известному сайту Ask.fm.
+Для использования приложения необходимо в нём зарегистрироваться. После этого можно редактировать свой профиль, задавать и отвечать на вопросы как зарегистрированных, так и анонимных пользователей.
 
-Things you may want to cover:
+Приложение написано на `Ruby 3.0.0` и `Rails 7.0.2`.
 
-* Ruby version
+## Запуск
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Для использования приложения необходимо установить версии используемых библиотек, зафиксированные в Gemfile, при помощи команды:
+```
+bundle
+```
+Далее необходимо прогнать миграции:
+```
+bundle exec rails db:migrate
+```
+Для запуска локально необходимо запустить сервер
+```
+$ rails s
+```
+и в браузере набрать
+```
+http://localhost:3000/
+```
+Сслыка для запуска приложения на Heroku прикреплена в описании.
